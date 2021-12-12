@@ -1,0 +1,33 @@
+.menu {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    display: flex;
+    margin: 0 auto;
+
+    &__link {
+        display: block;
+        padding: 0 $padding * 2;
+        transition: color $transition;
+        line-height: $menu-height;
+        letter-spacing: 0.3rem;
+
+        @include media-max(1240px) {
+            padding: 0 $padding;
+        }
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+
+    &__toggler {
+        display: none;
+        line-height: $header-height;
+        height: $header-height;
+        width: $header-height;
+        margin-left: -$padding;
+        text-align: center;
+        cursor: pointer;
+        font-size: 1.6rem;
+    }
+}

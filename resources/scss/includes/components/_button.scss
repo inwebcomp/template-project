@@ -1,0 +1,123 @@
+// Config
+$button-font-size: 1.7rem;
+$button-font-color: #FFF;
+$button-border-color: $border-color;
+$button-border-radius: $border-radius;
+$button-height: 4.2rem;
+$button-padding: 0 2rem;
+$button-padding-small: 0 2rem * .75;
+
+$button-default-color: $primary-color;
+
+
+
+// Styles
+.button {
+    font-size: $button-font-size;
+    color: $button-font-color;
+    border: none;
+    border-radius: $button-border-radius;
+    background-color: $button-default-color;
+    padding: $button-padding;
+    height: $button-height;
+    line-height: $button-height;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+
+    transition: background-color $transition;
+
+    &:focus, &:hover {
+        background-color: darken($button-default-color, 3%);
+    }
+
+    &:active {
+        background-color: darken($button-default-color, 6%);
+    }
+
+    i {
+        margin-left: $padding * .5;
+    }
+}
+
+.button--icon-left {
+    i {
+        margin-right: $padding;
+        font-size: $button-font-size * 1.5;
+        vertical-align: text-bottom;
+    }
+}
+
+.button--success {
+    background-color: $success-color;
+    color: #FFF;
+
+    &:focus, &:hover {
+        background-color: darken($success-color, 3%);
+    }
+
+    &:active {
+        background-color: darken($success-color, 6%);
+    }
+}
+
+.button--gray {
+    background-color: $border-color;
+    color: $font-color;
+
+    &:focus, &:hover {
+        background-color: darken($border-color, 5%);
+    }
+
+    &:active {
+        background-color: darken($border-color, 8%);
+    }
+}
+
+.button--default {
+    background-color: #FFF;
+    color: $font-color;
+
+    &:focus, &:hover {
+        background-color: darken($border-color, 5%);
+    }
+
+    &:active {
+        background-color: darken($border-color, 8%);
+    }
+}
+
+.button--ghost {
+    background-color: transparent;
+    color: $primary-color;
+
+    &:focus, &:hover {
+        background-color: transparent;
+    }
+
+    &:active {
+        background-color: transparent;
+    }
+}
+
+.button--disabled {
+    background-color: $border-color;
+    color: $font-color-secondary;
+    cursor: default;
+    outline: none;
+
+    &:focus, &:hover {
+        background-color: $border-color;
+    }
+
+    &:active {
+        background-color: $border-color;
+    }
+}
+
+.button--small {
+    font-size: $button-font-size * .8;
+    height: $button-height * .8;
+    line-height: $button-height * .8;
+}

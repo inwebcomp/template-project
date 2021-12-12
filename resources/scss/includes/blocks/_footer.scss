@@ -1,0 +1,38 @@
+.footer {
+    margin-top: auto;
+    background-color: #1b1e21;
+    color: #FFF;
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__top {
+        padding: $padding 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__to-top {
+        padding: $padding * .5 0;
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        cursor: pointer;
+
+        .icon {
+            margin-right: $padding * .5;
+        }
+    }
+
+    &__text {
+        font-size: 1.2rem;
+    }
+
+    &__copyrights {
+        font-size: 1.2rem;
+    }
+}

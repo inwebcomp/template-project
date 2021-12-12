@@ -1,0 +1,59 @@
+.language {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-left: $padding;
+
+    &__button {
+        width: 22px;
+        box-sizing: content-box;
+        overflow: hidden;
+        display: block;
+        font-weight: 700;
+        font-size: 0;
+        color: #3e415b;
+        padding: 4px 0 7px;
+        text-align: center;
+        line-height: 1;
+
+        &:not(:last-child) {
+            margin-right: $padding;
+        }
+
+        &::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: $padding / 2;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+        }
+
+        &--ru {
+            &::before {
+                background-image: url('/img/icons/lang/ru.svg');
+            }
+
+        }
+        &--ro {
+            &::before {
+                background-image: url('/img/icons/lang/ro.svg');
+            }
+        }
+        &--en {
+            &::before {
+                background-image: url('/img/icons/lang/en.svg');
+            }
+        }
+
+        &--active {
+            width: auto;
+            font-size: 1.4rem;
+            border-bottom: 2px solid $accent-color;
+        }
+    }
+}

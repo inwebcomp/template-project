@@ -1,0 +1,38 @@
+.icon {
+    display: inline-flex;
+    width: 28px;
+    height: 28px;
+    vertical-align: middle;
+    border-radius: 0;
+    background-color: transparent;
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.8rem;
+    transition: opacity $transition;
+
+    &--phone {
+        background-image: url($icon-path + "phone.svg");
+    }
+
+    &--arrow-top {
+        height: 20px;
+        width: 20px;
+        background-image: url($icon-path + "arrow-top.svg");
+    }
+
+    &--close {
+        background-image: url($icon-path + "close.svg");
+        height: 14px;
+        width: 14px;
+    }
+
+    &--menu {
+        background-image: url($icon-path + "menu.svg");
+        height: 24px;
+        width: 24px;
+    }
+}
+
