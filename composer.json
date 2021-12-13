@@ -1,10 +1,14 @@
 {
-    "name": "laravel/laravel",
+    "name": "inweb/laravel-project",
     "type": "project",
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "repositories": [
+        {
+            "type": "path",
+            "url": "./packages/inweb/metadata"
+        },
         {
             "type": "path",
             "url": "./packages/inweb/base"
@@ -20,6 +24,11 @@
         {
             "type": "path",
             "url": "./packages/inweb/translations-parser",
+            "canonical": false
+        },
+        {
+            "type": "path",
+            "url": "./packages/inweb/admin-resource-tool-metadata",
             "canonical": false
         },
         {
@@ -41,10 +50,12 @@
         "inweb/admin-translatable-phrases": "^8.0",
         "inweb/base": "dev-master",
         "inweb/media": "dev-master",
+        "inweb/metadata": "dev-main",
         "laravel/framework": "^8.65",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-        "inweb/admin-resource-tool-images": "dev-master"
+        "inweb/admin-resource-tool-images": "dev-master",
+        "inweb/admin-resource-tool-metadata": "dev-master"
     },
     "require-dev": {
         "ext-curl": "*",

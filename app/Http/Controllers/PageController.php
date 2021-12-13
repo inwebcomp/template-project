@@ -27,6 +27,7 @@ class PageController extends Controller
                 'page'        => $page,
                 'breadcrumbs' => Breadcrumbs::page($page),
                 'pageTitle'   => $page->title,
+                'meta'        => $page->getMetadata(),
             ])->render();
         };
 

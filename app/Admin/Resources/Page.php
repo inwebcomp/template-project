@@ -2,6 +2,7 @@
 
 namespace App\Admin\Resources;
 
+use Admin\ResourceTools\Metadata\Metadata;
 use Illuminate\Http\Request;
 use InWeb\Admin\App\Actions\Hide;
 use InWeb\Admin\App\Actions\Publish;
@@ -92,6 +93,7 @@ class Page extends Resource
             Editor::make(__('Текст'), 'text'),
             Boolean::make(__('Опубликован'), 'status')->default(true),
 
+            new Metadata(),
             new ActionsOnModel(),
         ];
     }

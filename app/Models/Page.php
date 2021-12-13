@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Collection;
 use InWeb\Base\Contracts\Cacheable;
 use InWeb\Base\Traits\ClearsCache;
 use InWeb\Base\Traits\Translatable;
@@ -12,6 +13,8 @@ use InWeb\Base\Traits\Positionable;
 use InWeb\Base\Traits\TranslatableSlug;
 use InWeb\Base\Traits\WithStatus;
 use InWeb\Media\Images\WithContentImages;
+use InWeb\Metadata\Models\Metadata;
+use InWeb\Metadata\WithMetadata;
 use Spatie\EloquentSortable\Sortable;
 
 /**
@@ -29,7 +32,8 @@ class Page extends Entity implements HasPage, Sortable, Cacheable
         WithStatus,
         Positionable,
         TranslatableSlug,
-        ClearsCache;
+        ClearsCache,
+        WithMetadata;
 
     public string $translationModel     = 'App\Translations\PageTranslation';
     public array  $translatedAttributes = ['title', 'slug', 'text'];

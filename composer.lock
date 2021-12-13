@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "937e703b11ae3f4a1c6e89a47cfbc573",
+    "content-hash": "884fa52b4d1825b1a81f6b4dc1503400",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1340,7 +1340,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/inweb/admin",
-                "reference": "dc6106664f80dcb2087916f0a63c87196d0842b0"
+                "reference": "1eaca60e59b01cc48294696faa9f9486d916e40c"
             },
             "require": {
                 "cakephp/chronos": "^1.0|^2.0",
@@ -1397,10 +1397,10 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/inweb/admin-resource-tool-images",
-                "reference": "807b40dafb0c61cb1c8747eccb65c976fc7f7426"
+                "reference": "3e19aaef317cf77b29c6291724668d8647900e68"
             },
             "require": {
-                "php": ">=7.1.0"
+                "php": "^7.1|^8.0"
             },
             "type": "library",
             "extra": {
@@ -1421,6 +1421,42 @@
             "description": "InWeb Admin resource tool for images manipulation",
             "keywords": [
                 "laravel"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "inweb/admin-resource-tool-metadata",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./packages/inweb/admin-resource-tool-metadata",
+                "reference": "e2233bc1f51bf79488bfb3bc53d7255769d7fabc"
+            },
+            "require": {
+                "php": "^7.1|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Admin\\ResourceTools\\Metadata\\ResourceToolServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Admin\\ResourceTools\\Metadata\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "InWeb Admin resource tool for metadata management",
+            "keywords": [
+                "laravel",
+                "metadata"
             ],
             "transport-options": {
                 "relative": true
@@ -1477,13 +1513,13 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/inweb/base",
-                "reference": "719925e113230e3b55d5d3548c36850338c4f574"
+                "reference": "430e49031e640b2df7639e39cfd123c08c8cb8fa"
             },
             "require": {
                 "astrotomic/laravel-translatable": "^11.0",
                 "cviebrock/eloquent-sluggable": "^7.0|^8.0",
                 "kalnoy/nestedset": "^6.0",
-                "php": "^7.0|^8.0",
+                "php": "^7.0|^8.1",
                 "spatie/eloquent-sortable": "^4.0",
                 "spatie/once": "3.0.1"
             },
@@ -1533,7 +1569,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/inweb/media",
-                "reference": "99a0d7e1508b010f56445e8b6179c01801c0a633"
+                "reference": "7c47b2ebf4b1ffeb763fd06e8f80aead083f1851"
             },
             "require": {
                 "intervention/image": "^2.7",
@@ -1586,6 +1622,51 @@
                 "inweb",
                 "laravel",
                 "media"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
+            "name": "inweb/metadata",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./packages/inweb/metadata",
+                "reference": "c8bed74cbef93c68cb616da8660a462241652499"
+            },
+            "require": {
+                "php": "^7.1|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "InWeb\\Metadata\\MetadataServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "InWeb\\Metadata\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Topalo",
+                    "email": "inwebcomp@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Metadata for entities",
+            "homepage": "https://github.com/inwebcomp/metadata",
+            "keywords": [
+                "inweb",
+                "laravel",
+                "metadata"
             ],
             "transport-options": {
                 "relative": true
@@ -6315,16 +6396,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v5.4.0",
+            "version": "v5.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "d4394d044ed69a8f244f3445bcedf8a0d7fe2403"
+                "reference": "264dce589e7ce37a7ba99cb901eed8249fbec92f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/d4394d044ed69a8f244f3445bcedf8a0d7fe2403",
-                "reference": "d4394d044ed69a8f244f3445bcedf8a0d7fe2403",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/264dce589e7ce37a7ba99cb901eed8249fbec92f",
+                "reference": "264dce589e7ce37a7ba99cb901eed8249fbec92f",
                 "shasum": ""
             },
             "require": {
@@ -6362,11 +6443,13 @@
             "authors": [
                 {
                     "name": "Graham Campbell",
-                    "email": "hello@gjcampbell.co.uk"
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
                 },
                 {
                     "name": "Vance Lucas",
-                    "email": "vance@vancelucas.com"
+                    "email": "vance@vancelucas.com",
+                    "homepage": "https://github.com/vlucas"
                 }
             ],
             "description": "Loads environment variables from `.env` to `getenv()`, `$_ENV` and `$_SERVER` automagically.",
@@ -6377,7 +6460,7 @@
             ],
             "support": {
                 "issues": "https://github.com/vlucas/phpdotenv/issues",
-                "source": "https://github.com/vlucas/phpdotenv/tree/v5.4.0"
+                "source": "https://github.com/vlucas/phpdotenv/tree/v5.4.1"
             },
             "funding": [
                 {
@@ -6389,7 +6472,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-11-10T01:08:39+00:00"
+            "time": "2021-12-12T23:22:04+00:00"
         },
         {
             "name": "voku/portable-ascii",
@@ -10480,7 +10563,9 @@
         "inweb/admin": 20,
         "inweb/base": 20,
         "inweb/media": 20,
-        "inweb/admin-resource-tool-images": 20
+        "inweb/metadata": 20,
+        "inweb/admin-resource-tool-images": 20,
+        "inweb/admin-resource-tool-metadata": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
