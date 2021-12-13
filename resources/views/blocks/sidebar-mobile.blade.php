@@ -12,7 +12,3 @@
         </div>
     </header>
 </transition>
-
-<transition>
-    <div class="sidebar__overlay" @click="hideMenu" v-show="menuOpened"></div>
-</transition>
