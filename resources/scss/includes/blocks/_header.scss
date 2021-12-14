@@ -9,11 +9,15 @@
         align-items: center;
         justify-content: space-between;
         height: $header-height;
-        background: #FFF;
     }
 
     .logo {
         margin-right: $padding;
+
+        img {
+            width: auto;
+            height: 48px;
+        }
     }
 
     &__phone {
@@ -132,6 +136,7 @@
     &__img {
         display: block;
         font-size: 1.2rem;
-        background-color: transparentize($primary-color, 0.9);
+        width: auto;
+        height: 48px;
     }
 }

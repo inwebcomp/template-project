@@ -1,15 +1,14 @@
 .menu {
     font-size: 1.5rem;
-    text-transform: uppercase;
+    font-weight: bold;
     display: flex;
     margin: 0 auto;
 
     &__link {
         display: block;
-        padding: 0 $padding * 2;
+        padding: 0 $padding;
         transition: color $transition;
         line-height: $menu-height;
-        letter-spacing: 0.3rem;
 
         @include media-max(1240px) {
             padding: 0 $padding;
